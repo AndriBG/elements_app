@@ -7,14 +7,30 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'message/:id',
-    loadChildren: () => import('./view-message/view-message.module').then( m => m.ViewMessagePageModule)
+    path: 'message/:number',
+    loadChildren: () => import('./pages/view-message/view-message.module').then( m => m.ViewMessagePageModule)
   },
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  // {
+  //   path: 'about',
+  //   loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  // },
+  {
+    path: 'elements',
+    loadChildren: () => import('./pages/elementos/elementos.module').then( m => m.ElementosPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+  },
+  // {
+  //   path: 'elementos',
+  //   loadChildren: () => import('./pages/elementos/elementos.module').then( m => m.ElementosPageModule)
+  // },
 ];
 
 @NgModule({

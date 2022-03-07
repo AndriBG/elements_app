@@ -1,3 +1,33 @@
+<ion-menu contentId="main" menuId="main-menu">
+  <ion-content>
+    <div class="menu-header-bg">Menu</div>
+    <div class="header-content">
+      <img src="./../assets/andri.jpeg" alt="">
+      <ion-label>
+        <h2>Andri Bonilla G.</h2>
+        <p>Desarrollador IONIC</p>
+      </ion-label>
+    </div>
+    <ion-list class="menu-items" lines="none">
+      <ion-menu-toggle auto-hide="true">
+        <ion-item class="" routerLink="">
+          <ion-icon name="planet-outline"></ion-icon> Home
+        </ion-item>
+        </ion-menu-toggle>
+      <ion-menu-toggle auto-hide="true">
+      <ion-item class="" routerLink="elements">
+        <ion-icon name="logo-electron"></ion-icon> Elements
+      </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle auto-hide="true">
+      <ion-item routerLink="about">
+        <ion-icon name="alert-circle-outline"></ion-icon> About
+      </ion-item>
+    </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

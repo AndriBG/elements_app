@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="getBackButtonText()" defaultHref="/elements"></ion-back-button>
+      <!-- <ion-menu-button menu="main-menu"></ion-menu-button> -->
+    </ion-buttons>
+    <ion-title>
+      {{ message.name }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="message">
+  <ion-item>
+    <!-- <ion-icon name="person-circle" color="primary"></ion-icon> -->
+    <img [src]="message.spectral_img" alt="">
+    <ion-label class="ion-text-wrap">
+      <h2>
+        {{ message.symbol }}
+        <span class="date">
+          <ion-note>{{message.phase}}</ion-note>
+        </span>
+      </h2>
+      <br>
+      <h3>Atomic mass: <ion-note>{{ message.atomic_mass }}</ion-note></h3>
+      <h3>Density: <ion-note>{{message.density}}</ion-note></h3>
+    </ion-label>
+  </ion-item>
+  <div class="ion-padding">
+    <!-- <h1>algon</h1> -->
+    <p>{{message.summary}}</p>
+  </div>
+</ion-content>
